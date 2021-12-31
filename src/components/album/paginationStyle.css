@@ -1,0 +1,50 @@
+.containerStyle {
+  display: flex;
+  margin-bottom: 60px;
+  justify-content: space-between;
+  list-style: none;
+  width: 180px;
+}
+
+.containerStyle a {
+  font-weight: normal;
+  font-size: 29px;
+  line-height: 32px;
+  color: #b4b4b4;
+  cursor: pointer;
+}
+
+.containerStyle a:hover {
+  font-weight: 600;
+  font-size: 29px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.nextBtnStyle a {
+  font-weight: 600;
+  font-size: 29px;
+  line-height: 32px;
+  color: #000000;
+}
+.previousBtnStyle a {
+  font-weight: 600;
+  font-size: 29px;
+  line-height: 32px;
+  color: #000000;
+}
+.disableStyle a,
+.disableStyle a:hover {
+  font-weight: 600;
+  font-size: 29px;
+  line-height: 32px;
+  color: #b4b4b4;
+  cursor: default;
+}
+.activePageStyle a {
+  font-weight: 600;
+  font-size: 29px;
+  line-height: 32px;
+  text-align: right;
+  color: #000000;
+}

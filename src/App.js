@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, createContext } from "react";
+import "./App.css";
+import Header from "components/header/Header.js";
+import DayPhoto from "components/dayPhoto/dayPhoto/DayPhoto";
+import Album from "components/album/Album";
+
+export const CartContext = createContext(null);
 
 function App() {
+  const [cart, setCart] = useState([]);
+  const [cartDetailes, setCartDetailes] = useState({
+    price: "",
+    img: {},
+    name: "",
+  });
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className="main">
+        <CartContext.Provider
+          value={{ cart, setCart, cartDetailes, setCartDetailes }}
         >
-          Learn React
-        </a>
-      </header>
+          <Header />
+          <DayPhoto />
+          <Album />
+        </CartContext.Provider>
+      </div>
     </div>
   );
 }
